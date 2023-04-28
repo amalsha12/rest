@@ -1,0 +1,35 @@
+ <html>
+    <head>
+        <body>
+            <form action ='' method='POST' enctype="multipart/form-data">
+            {% for i in foodlist %}
+            <img src="{{i.foodimg.url}}" width="200" height="200">
+            <a href="{% url 'restapp3:detail' i.id %}">{{i.foodday}}</a>
+            {% endfor %}
+            </form>
+        </body>
+    </head>
+</html>            
+
+{% comment %} 
+......
+<html>
+    <head>
+        <body>
+            <form action ='' method='POST' enctype="multipart/form-data">
+<div class="card" style="width: 18rem;">
+    {% for i in foodlist %}
+    <img src="{{i.foodimg.url}}" width="200" height="200">
+    <div class="card-body">
+      <h5 class="card-title">{{i.foodname}}</h5>
+      <p class="card-text">{{i.fooddesc}}</p>
+      <a href="{% url 'restapp3:detail' i.id %}">{{i.foodname}}</a>
+            {% endfor %}
+      <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+    </div>
+  </div>
+</form>
+</body>
+</head>
+</html> {% endcomment %}
+ 

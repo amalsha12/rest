@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <body>
+            <form action='' method='post'>
+                <div class="card" style="width: 18rem;">
+                    <img src="{{food.foodimg.url}}" width="200" height="200">
+                    <div class="card-body">
+                        <h3 class="card-text">{{food.foodday}}</h3>
+                        <h4 class="card-title">{{food.foodname}}</h4>
+                        <p class="card-text">{{food.fooddesc}}</p>
+                        <a class="btn btn-warning" href="{% url 'restapp3:update' food.id %}">update</a>
+                        <a class="btn btn-danger" href="{% url 'restapp3:delete' food.id %}">DELETE</a>                       
+                    </div>
+                </div>
+            </form>
+        </body>
+    </head>
+</html>
+
+
+
+

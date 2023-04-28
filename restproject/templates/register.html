@@ -1,0 +1,25 @@
+<html>
+    <head>
+        Register
+        <body>
+            <form action ='' method='post'>
+                {% csrf_token %}
+
+                <input type='text' name='firstname' placeholder='enter the firstname'><br>
+                <input type='text' name='lastname' placeholder='enter the lastname'><br>
+                <input type='email' name='email' placeholder='enter the email'><br>
+                <input type='text' name='username' placeholder='enter the username'><br>
+                <input type='password' name='password' placeholder='enter the password'><br>
+                <input type='submit'>
+                {% comment %} <input class="btn btn-primary" type="submit" value="Submit"> {% endcomment %}
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </form>
+        </body>
+    </head>
+</html>
